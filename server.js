@@ -3,6 +3,7 @@ import express from "express";
 import mongoose from "mongoose";
 import dotenv from "dotenv";
 import UserRoutes from "./route/user.route.js";
+import CreditRoutes from "./route/credit.routes.js";
 
 dotenv.config(); // Load .env variables
 
@@ -14,6 +15,7 @@ app.use(express.json());
 
 //Routes
 UserRoutes(app);
+CreditRoutes(app);
 
 // MongoDB connection
 mongoose
