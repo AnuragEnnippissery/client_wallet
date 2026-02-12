@@ -2,6 +2,7 @@ import express from "express";
 //import cors from "cors";
 import mongoose from "mongoose";
 import dotenv from "dotenv";
+import UserRoutes from "./route/user.route.js";
 
 dotenv.config(); // Load .env variables
 
@@ -10,6 +11,9 @@ const app = express();
 // Middleware
 app.use(express.json());
 //app.use(cors());
+
+//Routes
+UserRoutes(app);
 
 // MongoDB connection
 mongoose
